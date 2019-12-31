@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_Validation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sIdType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCountry" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bAccType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAccNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="trxValue" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ValidationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ValidationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_Transfer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UIDBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sIdType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sContactNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOccupation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFundSource" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBirthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCurrency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCurrency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="trxValue" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bLastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bAccType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BankProvince" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BankCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BankBranchName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BankBranchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAccNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bIdType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bIdNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bContactNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Relationship" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bPostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bProvinceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bRegencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bPayoutID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bPayoutPIN" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sAmount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="FR_Key" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bPurposeCode" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_TransferResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_TransferResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Forex">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ForexResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ForexResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ForexNextRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CurrTo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ForexNextRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ForexNextRateResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_TrxStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="GTN" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_TrxStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_TrxStatusResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Balance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_BalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_BalanceResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Ping">
+        <s:complexType />
+      </s:element>
+      <s:element name="PingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="PingResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Watchlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UIDBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassportNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_WatchlistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_WatchlistResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BillInquiry">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sIdType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCurrency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bAmount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAccNum" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BillInquiryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_BillInquiryResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BillPayment">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UIDBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sIdType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sContactNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCurrency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCurrency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bAmount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAccNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bBillNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAccName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bStatementDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bDueDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bBillType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo6" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo7" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo8" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo9" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCustomInfo10" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_BillPaymentResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_BillPaymentResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_Transfer_Sync">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UIDBranch" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sLastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="sIdType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sIdExpiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sContactNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sOccupation" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sFundSource" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sBirthDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sPostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sCurrency" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCountry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCurrency" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="trxValue" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="bFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bLastName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bAccType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bIssuerCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAccNum" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bIdType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="bIdNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bContactNum" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Relationship" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bCity" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bPostCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bProvinceCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bRegencyCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bPayoutID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="bPayoutPIN" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_Transfer_SyncResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_Transfer_SyncResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_List">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ListName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ListResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_Cancellation">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trangloTransactionId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_CancellationResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_CancellationResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CancellationStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cancellationId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_CancellationStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_CancellationStatusResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_ChangeName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="transID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="trangloTransactionId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beneFirstName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="beneLastName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Do_ChangeNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Do_ChangeNameResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ChangeNameStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="changeId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_ChangeNameStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_ChangeNameStatusResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_TrxFee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="bAccType" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="currFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="currTo" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="trxValue" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_TrxFeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_TrxFeeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PayoutCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PWD" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="rspSign" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="requestId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="countryCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="preBookQty" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_PayoutCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_PayoutCodeResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_ValidationSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Validation" />
+  </wsdl:message>
+  <wsdl:message name="Get_ValidationSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_TransferSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_Transfer" />
+  </wsdl:message>
+  <wsdl:message name="Do_TransferSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_TransferResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ForexSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Forex" />
+  </wsdl:message>
+  <wsdl:message name="Get_ForexSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ForexResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ForexNextRateSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ForexNextRate" />
+  </wsdl:message>
+  <wsdl:message name="Get_ForexNextRateSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ForexNextRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_TrxStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_TrxStatus" />
+  </wsdl:message>
+  <wsdl:message name="Get_TrxStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_TrxStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_BalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Balance" />
+  </wsdl:message>
+  <wsdl:message name="Get_BalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_BalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapIn">
+    <wsdl:part name="parameters" element="tns:Ping" />
+  </wsdl:message>
+  <wsdl:message name="PingSoapOut">
+    <wsdl:part name="parameters" element="tns:PingResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_WatchlistSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Watchlist" />
+  </wsdl:message>
+  <wsdl:message name="Get_WatchlistSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_WatchlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_BillInquirySoapIn">
+    <wsdl:part name="parameters" element="tns:Do_BillInquiry" />
+  </wsdl:message>
+  <wsdl:message name="Do_BillInquirySoapOut">
+    <wsdl:part name="parameters" element="tns:Do_BillInquiryResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_BillPaymentSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_BillPayment" />
+  </wsdl:message>
+  <wsdl:message name="Do_BillPaymentSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_BillPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_Transfer_SyncSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_Transfer_Sync" />
+  </wsdl:message>
+  <wsdl:message name="Do_Transfer_SyncSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_Transfer_SyncResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ListSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_List" />
+  </wsdl:message>
+  <wsdl:message name="Get_ListSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ListResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_CancellationSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_Cancellation" />
+  </wsdl:message>
+  <wsdl:message name="Do_CancellationSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_CancellationResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_CancellationStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_CancellationStatus" />
+  </wsdl:message>
+  <wsdl:message name="Get_CancellationStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_CancellationStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Do_ChangeNameSoapIn">
+    <wsdl:part name="parameters" element="tns:Do_ChangeName" />
+  </wsdl:message>
+  <wsdl:message name="Do_ChangeNameSoapOut">
+    <wsdl:part name="parameters" element="tns:Do_ChangeNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_ChangeNameStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_ChangeNameStatus" />
+  </wsdl:message>
+  <wsdl:message name="Get_ChangeNameStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_ChangeNameStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_TrxFeeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_TrxFee" />
+  </wsdl:message>
+  <wsdl:message name="Get_TrxFeeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_TrxFeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_PayoutCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_PayoutCode" />
+  </wsdl:message>
+  <wsdl:message name="Get_PayoutCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_PayoutCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="API_Service1Soap">
+    <wsdl:operation name="Get_Validation">
+      <wsdl:input message="tns:Get_ValidationSoapIn" />
+      <wsdl:output message="tns:Get_ValidationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_Transfer">
+      <wsdl:input message="tns:Do_TransferSoapIn" />
+      <wsdl:output message="tns:Do_TransferSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Forex">
+      <wsdl:input message="tns:Get_ForexSoapIn" />
+      <wsdl:output message="tns:Get_ForexSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ForexNextRate">
+      <wsdl:input message="tns:Get_ForexNextRateSoapIn" />
+      <wsdl:output message="tns:Get_ForexNextRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_TrxStatus">
+      <wsdl:input message="tns:Get_TrxStatusSoapIn" />
+      <wsdl:output message="tns:Get_TrxStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Balance">
+      <wsdl:input message="tns:Get_BalanceSoapIn" />
+      <wsdl:output message="tns:Get_BalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <wsdl:input message="tns:PingSoapIn" />
+      <wsdl:output message="tns:PingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Watchlist">
+      <wsdl:input message="tns:Get_WatchlistSoapIn" />
+      <wsdl:output message="tns:Get_WatchlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_BillInquiry">
+      <wsdl:input message="tns:Do_BillInquirySoapIn" />
+      <wsdl:output message="tns:Do_BillInquirySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_BillPayment">
+      <wsdl:input message="tns:Do_BillPaymentSoapIn" />
+      <wsdl:output message="tns:Do_BillPaymentSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_Transfer_Sync">
+      <wsdl:input message="tns:Do_Transfer_SyncSoapIn" />
+      <wsdl:output message="tns:Do_Transfer_SyncSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_List">
+      <wsdl:input message="tns:Get_ListSoapIn" />
+      <wsdl:output message="tns:Get_ListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_Cancellation">
+      <wsdl:input message="tns:Do_CancellationSoapIn" />
+      <wsdl:output message="tns:Do_CancellationSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_CancellationStatus">
+      <wsdl:input message="tns:Get_CancellationStatusSoapIn" />
+      <wsdl:output message="tns:Get_CancellationStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Do_ChangeName">
+      <wsdl:input message="tns:Do_ChangeNameSoapIn" />
+      <wsdl:output message="tns:Do_ChangeNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChangeNameStatus">
+      <wsdl:input message="tns:Get_ChangeNameStatusSoapIn" />
+      <wsdl:output message="tns:Get_ChangeNameStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_TrxFee">
+      <wsdl:input message="tns:Get_TrxFeeSoapIn" />
+      <wsdl:output message="tns:Get_TrxFeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_PayoutCode">
+      <wsdl:input message="tns:Get_PayoutCodeSoapIn" />
+      <wsdl:output message="tns:Get_PayoutCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="API_Service1Soap" type="tns:API_Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Validation">
+      <soap:operation soapAction="http://tempuri.org/Get_Validation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Transfer">
+      <soap:operation soapAction="http://tempuri.org/Do_Transfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Forex">
+      <soap:operation soapAction="http://tempuri.org/Get_Forex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ForexNextRate">
+      <soap:operation soapAction="http://tempuri.org/Get_ForexNextRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_TrxStatus">
+      <soap:operation soapAction="http://tempuri.org/Get_TrxStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Balance">
+      <soap:operation soapAction="http://tempuri.org/Get_Balance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Watchlist">
+      <soap:operation soapAction="http://tempuri.org/Get_Watchlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BillInquiry">
+      <soap:operation soapAction="http://tempuri.org/Do_BillInquiry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BillPayment">
+      <soap:operation soapAction="http://tempuri.org/Do_BillPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Transfer_Sync">
+      <soap:operation soapAction="http://tempuri.org/Do_Transfer_Sync" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_List">
+      <soap:operation soapAction="http://tempuri.org/Get_List" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Cancellation">
+      <soap:operation soapAction="http://tempuri.org/Do_Cancellation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_CancellationStatus">
+      <soap:operation soapAction="http://tempuri.org/Get_CancellationStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_ChangeName">
+      <soap:operation soapAction="http://tempuri.org/Do_ChangeName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChangeNameStatus">
+      <soap:operation soapAction="http://tempuri.org/Get_ChangeNameStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_TrxFee">
+      <soap:operation soapAction="http://tempuri.org/Get_TrxFee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PayoutCode">
+      <soap:operation soapAction="http://tempuri.org/Get_PayoutCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="API_Service1Soap12" type="tns:API_Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Validation">
+      <soap12:operation soapAction="http://tempuri.org/Get_Validation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Transfer">
+      <soap12:operation soapAction="http://tempuri.org/Do_Transfer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Forex">
+      <soap12:operation soapAction="http://tempuri.org/Get_Forex" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ForexNextRate">
+      <soap12:operation soapAction="http://tempuri.org/Get_ForexNextRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_TrxStatus">
+      <soap12:operation soapAction="http://tempuri.org/Get_TrxStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Balance">
+      <soap12:operation soapAction="http://tempuri.org/Get_Balance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Ping">
+      <soap12:operation soapAction="http://tempuri.org/Ping" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Watchlist">
+      <soap12:operation soapAction="http://tempuri.org/Get_Watchlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BillInquiry">
+      <soap12:operation soapAction="http://tempuri.org/Do_BillInquiry" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_BillPayment">
+      <soap12:operation soapAction="http://tempuri.org/Do_BillPayment" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Transfer_Sync">
+      <soap12:operation soapAction="http://tempuri.org/Do_Transfer_Sync" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_List">
+      <soap12:operation soapAction="http://tempuri.org/Get_List" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_Cancellation">
+      <soap12:operation soapAction="http://tempuri.org/Do_Cancellation" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_CancellationStatus">
+      <soap12:operation soapAction="http://tempuri.org/Get_CancellationStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Do_ChangeName">
+      <soap12:operation soapAction="http://tempuri.org/Do_ChangeName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_ChangeNameStatus">
+      <soap12:operation soapAction="http://tempuri.org/Get_ChangeNameStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_TrxFee">
+      <soap12:operation soapAction="http://tempuri.org/Get_TrxFee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_PayoutCode">
+      <soap12:operation soapAction="http://tempuri.org/Get_PayoutCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="API_Service1">
+    <wsdl:port name="API_Service1Soap" binding="tns:API_Service1Soap">
+      <soap:address location="http://52.220.96.111:2012/API_Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="API_Service1Soap12" binding="tns:API_Service1Soap12">
+      <soap12:address location="http://52.220.96.111:2012/API_Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
